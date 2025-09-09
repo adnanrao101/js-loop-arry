@@ -10,11 +10,25 @@
 <body>
 
 
-    <button id="btn">Click Me</button>
+    <!-- <button id="btn">Click Me</button> -->
 <script>
-  document.getElementById("btn").addEventListener("click", () => {
-    document.body.style.background = "lightblue";
-  });
+//   document.getElementById("btn").addEventListener("click", () => {
+//     document.body.style.background = "lightblue";
+//   });
+
+
+
+    function makeCounter() {
+  let count = 0;          // private
+  return () => ++count;   // inner function closes over count
+}
+const inc = makeCounter();
+console.log(inc()); // 1
+console.log(inc()); // 2
+
+
+
+
 </script>
 
     
